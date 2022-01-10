@@ -1,0 +1,41 @@
+package test1;
+import java.util.Scanner;
+public class labTest2 {
+
+	public static void main(String[] args) 
+	{
+		Scanner in = new Scanner (System.in);
+		
+		int hours;
+		double sale;
+		double daily, com;
+		
+		System.out.print("Enter sales  : RM");
+		sale = in.nextInt();
+		
+		System.out.print("Enter hours worked : ");
+		hours = in.nextInt();
+		System.out.println(" ");
+		
+		if ((sale >= 150) && (sale <= 300))
+		{
+			com = 0.05*sale;
+		}
+		else if ((sale >= 301) && (sale <= 500))
+		{
+			com = 0.1*sale;
+		}
+		else if (sale > 500)
+		{
+			com = 0.15*500;
+		}
+		else
+			com = 0;
+		
+		daily = (hours*5) + com;
+		System.out.printf("Commission : RM%.2f" , com);
+		System.out.println(" ");
+		System.out.printf("Daily wages : RM%.2f" , daily);
+	}
+
+}
